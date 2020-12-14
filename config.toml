@@ -1,4 +1,4 @@
-baseURL = "cgy12306.github.io"
+baseURL = "/"
 title = "Compose Docs"
 enableRobotsTXT = true
 # this example loads the theme as hugo module
