@@ -1,5 +1,5 @@
 ---
-title: "DRIFT Docs"
+title: "KRONOL Docs"
 weight: 1
 ---
 
