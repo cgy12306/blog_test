@@ -102,7 +102,7 @@ Before you launch `irpt.py`, you should be take a snapshot of Qemu with `loader.
 ```shell
 $ ~/irpt/targets/compile_loader.sh
 ```
-If you prepare the binary in `targets/bin/loader.exe`, you can launch `[vm.py](http://vm.py)` to take a snapshot of Qemu. 
+If you prepare the binary in `targets/bin/loader.exe`, you can launch `vm.py` to take a snapshot of Qemu. 
 
 Launch `vm.py` to get a help message with the detailed list of parameters:
 
@@ -110,7 +110,7 @@ Launch `vm.py` to get a help message with the detailed list of parameters:
 $ python vm.py
 ```
 
-> <h4> Snapshot mode is not available to access internet. You can launch [vm.py](http://vm.py) with boot mode and download the binary inside the Qemu first.</h4>
+> <h3>Caution!<h3>  <h4>Snapshot mode is not available to access internet. You can launch `vm.py` with boot mode and download the binary inside the Qemu first.</h4>
 
 
 ## IRCAP
@@ -164,6 +164,7 @@ The next field shows you the number of different paths each program passes each 
 The remaining fields is the number of unique faults. The test cases, crashes, and hangs can be explored in real-time by browsing the `out` directory, as discussed in Interpreting output.
 
 <h4>Cycle progress</h4>
+
 ```shell
 +-------------------------------------+
 |  now processing : 14                |
