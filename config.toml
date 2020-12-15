@@ -52,8 +52,8 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
   # Site logo
   [params.logo]
-    lightMode = "kronol.png"
-    darkMode = "kronol.png"
+    lightMode = "kronol.jpg"
+    darkMode = "kronol.jpg"
 
   [params.source]
     name = "GitHub"
