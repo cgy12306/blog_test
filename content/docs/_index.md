@@ -77,10 +77,4 @@ The second fuzzer of team driverThru developed to solve the fatal problem of Bru
   IRPT는 IRP Program 이라는 단위로 IRP 패킷들을 묶어 뮤테이션을 진행하고, 이 IRP Program을 하나의 페이로드로 드라이버에게 전송하는 퍼저이다. Program 내부에 있는 각 IRP에 대한 IOCTL CODE와 inputBuffer 값들을 뮤테이션 하는 것은 물론, IRP의 순서에 대한 뮤테이션도 진행한다. 앞서 언급했던 두개의 Brute-force Fuzzer와 차별화 되는 IRPT만의 특징이자 가장 큰 장점은 바로 IRP의 순서에 대한 뮤테이션이 가능하다는 점이다. 선행되는 IOCTL 루틴으로 dependency가 충족되어 이후 IOCTL 루틴의 커버리지가 증가 한 경우, 커버리지의 증가를 야기한 루틴의 선후 관계를 퍼저가 이해하고 다음 뮤테이션에 이를 반영할 수 있다. 이로써 기존의 퍼저들에서 해결하지 못한 문제들을 성공적으로 해결하고, 효율적인 드라이버 퍼징을 실현할 수 있었다. 
 
 
-> ##### asdfasdf
-
-
-
-{{< button "./compose/" "DRIFT Docs" >}}
-
-{{< button "./clarity/" "Clarity Theme Docs" >}}
+{{< button "./kronol/" "KRONOL Docs" >}}

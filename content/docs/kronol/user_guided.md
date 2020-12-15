@@ -8,11 +8,11 @@ description: >
 
 ## IREC 
 
-<h4>What is IREC</h4>
+- <h4>What is IREC</h4>
 
 A cross platform framework to recover driver's communication interface. It aims to recover communication interface for fuzzing a kernel driver.
 
-<h4>IREC structure</h4>
+- <h4>IREC structure</h4>
 
 ```
 IREC
@@ -25,7 +25,7 @@ IREC
 
 ```
 
-<h4>Install</h4>
+- <h4>Install</h4>
 We recommend python3.8 virtual environment to use IREC.
 
 ```shell
@@ -56,7 +56,7 @@ $ pip install r2pipe
 
 ## IRPT
 
-<h4>Getting started</h4>
+- <h4>Getting started</h4>
 
 This project is based on [kAFL: HW-assisted Feedback Fuzzing for x86 Kernels](https://github.com/intelLabs/kAFL/). So, there is overlapping parts on Installation.
 
@@ -95,7 +95,7 @@ Launch `irpt.py` to get a help message with the detailed list of parameters:
 $ python3 ~/kafl/kAFL-Fuzzer/kafl_fuzz.py -h
 ```
 
-<h4>Setting Qemu</h4>
+- <h4>Setting Qemu</h4>
 
 Before you launch `irpt.py`, you should be take a snapshot of Qemu with `loader.exe`. `loader.exe` is a file to load a target driver and `agent.exe`. Compile `loader.c` file to `loader.exe`:
 
@@ -122,7 +122,7 @@ You should compile a driver that can capture the IRP from target driver. It save
 
 You can monitor the fuzzer while it is running. We tried to make afl style to make it easier to recognize. There may be some side effects because It's an experimental function.
 
-<h4>Monitor mode on/off </h4>
+- <h4>Monitor mode on/off </h4>
 
 You can use the monitor mode if you just add `-tui` option.
 
@@ -132,7 +132,7 @@ $ python irpt.py ... -mode fuzz -tui
 ##### ![diy](/images/monitor.gif)
 
 
-<h4>Process timing</h4>
+- <h4>Process timing</h4>
 
 ```
 +----------------------------------------------------+
@@ -146,7 +146,7 @@ This section tells you how long the fuzzer has been running and how much time ha
 
 There’s one important thing to watch out for: if the tool is not finding new paths within several minutes of starting, you’re probably not invoking the target driver correctly and it never gets to parse the input files we’re throwing at it. The input file should be follow the IRP program format.
 
-<h4> Overall results</h4>
+- <h4> Overall results</h4>
 
 ```
 +-----------------------+
@@ -163,9 +163,9 @@ The next field shows you the number of different paths each program passes each 
 
 The remaining fields is the number of unique faults. The test cases, crashes, and hangs can be explored in real-time by browsing the `out` directory, as discussed in Interpreting output.
 
-<h4>Cycle progress</h4>
+- <h4>Cycle progress</h4>
 
-```shell
+```
 +-------------------------------------+
 |  now processing : 14                |
 |  total programs : 13 (4 unique)     |

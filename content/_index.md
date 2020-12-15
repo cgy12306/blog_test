@@ -1,5 +1,5 @@
 +++
-title = "Compose"
+title = "KRONOL"
 
 +++
 {{< block "grid-2 mt-2" >}}
@@ -7,12 +7,7 @@ title = "Compose"
 
 # __KRONOL__.
 
-KRONOL is AAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAA
-Segmentation Fault
+KRONOL is windows kernel fuzzer and recovers interface is used fuzzing of driver.
 
 {{< button "docs/" "Read the Docs" >}} {{< button "https://github.com/" "Download Fuzzer" >}}
 

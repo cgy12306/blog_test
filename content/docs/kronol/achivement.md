@@ -21,5 +21,3 @@ description: >
 | KVE-2020-1586 | Privilege Escalation in TFG Gamin Center U |
 | KVE-2020-1585 | Privilege Escalation in TFG Gamin Center U |
 | Ticket-GJGV-72536-2204 | Out of Bound Read in Advanced SystemCare Pro |
-
-> test~~~
