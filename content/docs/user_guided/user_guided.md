@@ -58,7 +58,7 @@ $ pip install r2pipe
 
 <h4>Getting started</h4>
 
-This project is based on [`kAFL: HW-assisted Feedback Fuzzing for x86 Kernels`](https://github.com/intelLabs/kAFL/). So, there is overlapping parts on Installation.
+This project is based on [kAFL: HW-assisted Feedback Fuzzing for x86 Kernels](https://github.com/intelLabs/kAFL/). So, there is overlapping parts on Installation.
 
 Installation requires multiple components, some of which can depend on Internet connectivity and defaults of your distribution / version. It is recommended to install step by step.
 
@@ -164,7 +164,7 @@ The next field shows you the number of different paths each program passes each 
 The remaining fields is the number of unique faults. The test cases, crashes, and hangs can be explored in real-time by browsing the `out` directory, as discussed in Interpreting output.
 
 <h4>Cycle progress</h4>
-```bash
+```shell
 +-------------------------------------+
 |  now processing : 14                |
 |  total programs : 13 (4 unique)     |
