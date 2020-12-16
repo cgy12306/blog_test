@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hugo -t compose
+#hugo -t compose
 cd public
 git pull origin master
 git add .
