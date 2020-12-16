@@ -6,7 +6,7 @@ description: >
 ---
 ---
 
-# IREC 
+## IREC 
 
 <h3>What is IREC</h3>
 
@@ -54,7 +54,7 @@ $ pip install r2pipe
 
 
 
-# IRPT
+## IRPT
 
 <h3>Getting started</h3>
 
@@ -113,12 +113,12 @@ $ python vm.py
 > <h3>Caution!<h3>  <h3>Snapshot mode is not available to access internet. You can launch `vm.py` with boot mode and download the binary inside the Qemu first.</h3>
 
 
-# IRCAP
+## IRCAP
 
 You should compile a driver that can capture the IRP from target driver. It saves the captured IRP file. You can use the file to select the seed when IRPT is launched.
 
 
-# Monitor
+## Monitor
 
 You can monitor the fuzzer while it is running. We tried to make afl style to make it easier to recognize. There may be some side effects because It's an experimental function.
 
