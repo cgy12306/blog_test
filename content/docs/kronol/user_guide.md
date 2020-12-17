@@ -21,7 +21,7 @@ IREC
 │   ├── symbolic                          # Techniques using symbolic execution.
 │   ├── static                            # Techniques using static analysis techniques
 │   └──wdm.py                             # WDM driver analysis framework
-└── irec.py                               # Main module
+└── irec.py                                # Main module
 
 ```
 
@@ -219,3 +219,40 @@ There’s the exec count progress indicator for the current stage, a global exec
 |  total tmouts : 1 (1 unique)         |
 +--------------------------------------+
 ```
+
+This gives you several metrics that are of interest mostly to complete nerds. The section includes the number of paths that the fuzzer likes the most based on a minimization algorithm baked into the code (these will get considerably more air time), and the last test cases that actually resulted in better edge coverage. There are also additional, more detailed counters for crashes and hangs. 
+
+The last two sections tell the total  / unique counters of crashes and hangs. In irpt, crasher algorithm checks if newer crash / hang is produced in same context with crash / hang made before. In last line, Tmout counter indicates exactly the same thing to hang in irpt.
+
+<h3>Fuzzing strategy yields</h3>
+
+```bash
++-----------------------------------------------------+
+|   insertIRP : 0/5327                                |
+|     swapIRP : 5/4003                                |
+|   mutateArg : 8/7749                                |
+| AFLdetermin : 9/23.0k                               |
+|      splice : 10/11.8k                              |
+|   removeIRP : 0/21.0k                               |
++-----------------------------------------------------+
+```
+
+This is just another nerd-targeted section keeping track of how many paths we have netted, in proportion to the number of execs attempted, for each of the fuzzing strategies discussed earlier on. This serves to convincingly validate assumptions about the usefulness of the various approaches taken by irpt.
+
+<h3>Path geometry</h3>
+
+```
++---------------------+
+|    level  : 3       |
+|   pending : 7       |
+|  pend fav : 2       |
+| uniq prog : 7       |
+|    reload : 0       |
++---------------------+
+```
+
+The first field in this section tracks the path depth reached through the guided fuzzing process. In essence: the initial test cases supplied by the user are considered “level 1”. The test cases that can be derived from that through traditional fuzzing are considered “level 2”; the ones derived by using these as inputs to subsequent fuzzing rounds are “level 3”; and so forth. The maximum depth is therefore a rough proxy for how much value you’re getting out of the instrumentation-guided approach taken by irpt.
+
+The next field shows you the number of inputs that have not gone through any fuzzing yet. The same stat is also given for “favored” entries that the fuzzer really wants to get to in this database cycle (the non-favored entries may have to wait probabilistically to get their chance).
+
+Last, we have the number of unique programs found during this fuzzing section and number of VMs reloaded by crash / hangs. In irpt, if fault events is occurred, VM(Qemu instance) is to be  shut downed then restarted.
