@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KRONOL Docs on Compose Docs</title>
+    <link>/docs/kronol/</link>
+    <description>Recent content in KRONOL Docs on Compose Docs</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/docs/kronol/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Achivements</title>
+      <link>/docs/kronol/achivement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/kronol/achivement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internal</title>
+      <link>/docs/kronol/internal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/kronol/internal/</guid>
+      <description>IREC IRPT IRCAP </description>
+    </item>
+    
+    <item>
+      <title>User guide</title>
+      <link>/docs/kronol/user_guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/kronol/user_guide/</guid>
+      <description>IREC What is IRECA cross platform framework to recover driver&#39;s communication interface. It aims to recover communication interface for fuzzing a kernel driver.
+IREC structureIREC├── test-drivers # Test drivers to verify that madcore is working.├── projects # Driver analysis projects│ ├── symbolic # Techniques using symbolic execution.│ ├── static # Techniques using static analysis techniques│ └──wdm.py # WDM driver analysis framework└── irec.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.79.0" />
+<link rel="apple-touch-icon" sizes="180x180" href='/favicons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicons/favicon-16x16.png'>
+<link rel="manifest" href='/favicons/site.webmanifest'>
+<link rel="mask-icon" href='/favicons/safari-pinned-tab.svg'  color="#004750">
+<link rel="shortcut icon" href='/favicons/favicon.ico'>
+<meta name="msapplication-config" content='/favicons/browserconfig.xml'>
+<title>User guide | Compose Docs</title><meta property="og:title" content="User guide" />
+<meta property="og:description" content="This page tells you how to get started with the Compose theme, including installation and basic configuration.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/kronol/user_guide/" />
+
+<meta itemprop="name" content="User guide">
+<meta itemprop="description" content="This page tells you how to get started with the Compose theme, including installation and basic configuration.
+">
+
+<meta itemprop="wordCount" content="1682">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="User guide"/>
+<meta name="twitter:description" content="This page tells you how to get started with the Compose theme, including installation and basic configuration.
+"/>
+
+
+<link rel="stylesheet" href="/css/styles.5326b797ec520d92b88e2c322865e051787a50e2e4b9b4588e7d9f0c931084c9cb625f0d526803590c36be4103467de71a591fa010158d56e18f7b236fb3f2cf.css" integrity="sha512-Uya3l&#43;xSDZK4jiwyKGXgUXh6UOLkubRYjn2fDJMQhMnLYl8NUmgDWQw2vkEDRn3nGlkfoBAVjVbhj3sjb7Pyzw==">
+
+</head>
+<body class="page-page">
+  <header class="nav_header">
+<nav class="wrap nav menu">
+	<a href="/" class="nav_brand">
+		<picture data-lit="/images/kronol.png" data-dark="/images/kronoldark.png">
+			
+			<source srcset = '/images/kronoldark.png' media="(prefers-color-scheme: dark)">
+			
+			<img srcset = '/images/kronol.png' alt = 'Compose Docs Logo'>
+		</picture>
+		<label class="nav_toggle toggle" title='Site Menu' role="button">
+			<svg class="icon">
+  <use xlink:href="#harmburger"></use>
+</svg>
+		</label>
+	</a>
+	<ul class="nav_body">
+		<li class="nav-item">
+<div class="search">
+  <label for="find" class="search_label"><svg class="icon">
+  <use xlink:href="#search"></use>
+</svg>
+  </label>
+  <input type="search" class="search_field" placeholder='Search the docs ...' id="find" autocomplete="off">
+  <div class="search_results results"></div>
+</div>
+
+
+
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/docs/"><span>Docs</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="https://docs.neuralvibes.com"><span>Example</span></a>
+		</li>
+		
+		<li class="nav-item">
+			<a class="nav-link" href="https://github.com/onweru/compose/" target="_blank">GitHub</a>
+		</li>
+		<li class="nav-item"><div class = 'color_mode'>
+  <label for = 'mode'></label>
+  <input type = 'checkbox' class = 'color_choice' id = 'mode' title="Toggle Dark Mode">
+</div>
+</li>
+	</ul>
+</nav>
+
+  </header>
+  <div class="main wrap pt-4"><div class="grid-auto"><aside class="aside menu">
+  <div>
+    <label class="aside_toggle toggle" title='Docs Menu' role="button">Docs Menu <svg class="icon">
+  <use xlink:href="#harmburger"></use>
+</svg></label>
+  </div>
+  <section class="section aside_inner">
+    <h2 class="section_title"><a  href="/docs/" class="group">Overview</a></h2>
+      <section class="" id="docs-overview">
+  <section class="section aside_inner">
+    <h2 class="section_title"><a  href="/docs/kronol/" class="group">KRONOL Docs</a></h2>
+      <section class="" id="docs-kronol-docs">
+        <h3 class="section_link"><a id="docs-achivements" href="/docs/kronol/achivement/">Achivements</a></h3><nav id="TableOfContents"></nav>
+        <h3 class="section_link"><a id="docs-internal" href="/docs/kronol/internal/">Internal</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#irec">IREC</a></li>
+    <li><a href="#irpt">IRPT</a></li>
+    <li><a href="#ircap">IRCAP</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link active"><a id="docs-user-guide" href="/docs/kronol/user_guide/">User guide</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#irec">IREC</a></li>
+    <li><a href="#irpt">IRPT</a></li>
+    <li><a href="#ircap">IRCAP</a></li>
+    <li><a href="#monitor">Monitor</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </section>
+  </section>
+      </section>
+  </section>
+</aside>
+
+  <main class="content">
+    <h1>User guide</h1><hr>
+<h2 id="irec">IREC</h2>
+<h3>What is IREC</h3>
+<p>A cross platform framework to recover driver's communication interface. It aims to recover communication interface for fuzzing a kernel driver.</p>
+<h3>IREC structure</h3>
+<pre><code>IREC
+├── test-drivers                           # Test drivers to verify that madcore is working.
+├── projects                               # Driver analysis projects
+│   ├── symbolic                          # Techniques using symbolic execution.
+│   ├── static                            # Techniques using static analysis techniques
+│   └──wdm.py                             # WDM driver analysis framework
+└── irec.py                                # Main module
+
+</code></pre><h3>Install</h3>
+We recommend python3.8 virtual environment to use IREC.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># install virtualenv</span>
+$ pip install virtualenv
+$ pip install virtualenvwrapper
+
+<span class="c1"># make virtual environment</span>
+$ virtualenv <span class="o">[</span>virtual env name<span class="o">]</span>
+$ <span class="nb">source</span> <span class="o">[</span>virtual env name<span class="o">]</span>/bin/activate
+
+$ deactivate
+</code></pre></td></tr></table>
+</div>
+</div><p>It requires angr, radare2 to use symbolic-analysis and static-analysis.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># use symbolic-analysis</span>
+$ pip install angr boltons argparse ipdb
+
+<span class="c1"># use static-analysis</span>
+$ apt install radare2
+$ pip install r2pipe
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="irpt">IRPT</h2>
+<h3>Getting started</h3>
+<p>This project is based on <a href="https://github.com/intelLabs/kAFL/">kAFL: HW-assisted Feedback Fuzzing for x86 Kernels</a>. So, there is overlapping parts on Installation.</p>
+<p>Installation requires multiple components, some of which can depend on Internet connectivity and defaults of your distribution / version. It is recommended to install step by step.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ git clone <span class="o">[</span>irpt<span class="o">]</span>
+$ <span class="nb">cd</span> ~/kafl
+$ ./install.sh deps     <span class="c1"># check platform and install dependencies</span>
+$ ./install.sh perms    <span class="c1"># allow current user to control KVM (/dev/kvm)</span>
+$ ./install.sh qemu     <span class="c1"># git clone qemu-pt and build Qemu</span>
+$ ./install.sh linux    <span class="c1"># git clone kvm-pt and build Linux</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>It is safe to re-execute any of these commands after failure, for example if not all dependencies could have been downloaded.</p>
+<p>The final step does not automatically install the new Linux kernel but only gives some default instructions. Install according to your preference/distribution defaults, or simply follow the suggested steps:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ ./install.sh note
+</code></pre></td></tr></table>
+</div>
+</div><p>After reboot, make sure the new kernel is booted and PT support is detected by KVM:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ sudo reboot
+$ dmesg<span class="p">|</span>grep VMX
+ <span class="o">[</span>VMX-PT<span class="o">]</span> Info:   CPU is supported!
+</code></pre></td></tr></table>
+</div>
+</div><p>You must set the correct path to the Qemu binary in <code>kAFL-Fuzzer/irpt.ini</code>.</p>
+<p>Launch <code>irpt.py</code> to get a help message with the detailed list of parameters:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ python3 ~/kafl/kAFL-Fuzzer/kafl_fuzz.py -h
+</code></pre></td></tr></table>
+</div>
+</div><h3>Setting Qemu</h3>
+<p>Before you launch <code>irpt.py</code>, you should be take a snapshot of Qemu with <code>loader.exe</code>. <code>loader.exe</code> is a file to load a target driver and <code>agent.exe</code>. Compile <code>loader.c</code> file to <code>loader.exe</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ ~/irpt/targets/compile_loader.sh
+</code></pre></td></tr></table>
+</div>
+</div><p>If you prepare the binary in <code>targets/bin/loader.exe</code>, you can launch <code>vm.py</code> to take a snapshot of Qemu.</p>
+<p>Launch <code>vm.py</code> to get a help message with the detailed list of parameters:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">$ python vm.py
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<h3>Caution!<h3>  <h3>Snapshot mode is not available to access internet. You can launch `vm.py` with boot mode and download the binary inside the Qemu first.</h3>
+</blockquote>
+<h2 id="ircap">IRCAP</h2>
+<p>You should compile a driver that can capture the IRP from target driver. It saves the captured IRP file. You can use the file to select the seed when IRPT is launched.</p>
+<h2 id="monitor">Monitor</h2>
+<p>You can monitor the fuzzer while it is running. We tried to make afl style to make it easier to recognize. There may be some side effects because It's an experimental function.</p>
+<h3>Monitor mode on/off </h3>
+<p>You can use the monitor mode if you just add <code>-tui</code> option.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ python irpt.py ... -mode fuzz -tui
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="diyimagesmonitorgif"><img src="/images/monitor.gif" alt="diy"></h5>
+<h3>Process timing</h3>
+<pre><code>+----------------------------------------------------+
+|        run time : 0 days, 1 hrs, 30 min, 43 sec    |
+|   last new path : 0 days, 0 hrs, 5 min, 40 sec     |
+| last uniq crash : none seen yet                    |
+|  last uniq hang : 0 days, 1 hrs, 24 min, 32 sec    |
++----------------------------------------------------+
+</code></pre><p>This section tells you how long the fuzzer has been running and how much time has elapsed since its most resent finds. This is broken down into &quot;paths&quot; (a shorthand for corpus that trigger new execution patterns), crashes, and hangs.</p>
+<p>There’s one important thing to watch out for: if the tool is not finding new paths within several minutes of starting, you’re probably not invoking the target driver correctly and it never gets to parse the input files we’re throwing at it. The input file should be follow the IRP program format.</p>
+<h3> Overall results</h3>
+<pre><code>+-----------------------+
+|  cycles done : 40     |
+|  total paths : 12     |
+| uniq crashes : 0      |
+|   uniq hangs : 1      |
++-----------------------+
+</code></pre><p>The first field in this section gives you the count of program mutates done so far - that is, the number of times the program that is input corpus went over all mutation logic. After the program finish a cycle, it creates a new program through the optimizer or executes a next cycle in order of the program in which they are scored.</p>
+<p>The next field shows you the number of different paths each program passes each time it is sent to the target driver. You can recognize the program is being mutated to find new coverages.</p>
+<p>The remaining fields is the number of unique faults. The test cases, crashes, and hangs can be explored in real-time by browsing the <code>out</code> directory, as discussed in Interpreting output.</p>
+<h3>Cycle progress</h3>
+<pre><code>+-------------------------------------+
+|  now processing : 14                |
+|  total programs : 13 (4 unique)     |
++-------------------------------------+
+</code></pre><p>The box tells you how far along the fuzzer is with the cycle. It shows the ID of the program it is currently working on. The total programs is all program that is made by the fuzzer and if the</p>
+<h3>Map coverage</h3>
+<pre><code>+--------------------------------------+
+|   total edges : 77                   |
+|   map density : 0.01% / 0.06%        |
++--------------------------------------+
+</code></pre><p>The section provides some trivia about the coverage observed by the target binary. The first line in the box deals with the counts of branch tuples the fuzzer has hit in the binary.</p>
+<p>The other line in the box tells you how many branch tuples the fuzzer has already hit, in proportion to how much the bitmap can hold. The number on the left describes the current program, the one on the right is the value for the entire corpus.</p>
+<h3>Stage progress</h3>
+<pre><code>+-------------------------------------+
+|   now trying : AFLdetermin          |
+| stage yields : 4/48.7k (0.01%)      |
+|  total execs : 76.2k                |
+|   exec speed : 1104/sec             |
++-------------------------------------+
+</code></pre><p>This part gives you an in-depth peek at what the fuzzer is actually doing right now. It tells you about the current stage.</p>
+<ul>
+<li>AFLdetermin: a mutation logic with a pre-made formula without random intervention. It was designed in the same arithmetic logic of afl.</li>
+<li>splice: a last-resort strategy that kicks in after the first full queue cycle with no new paths. It is equivalent to ‘havoc’, except that it first splices together two random inputs from the program at some arbitrarily selected midpoint.</li>
+<li>insertIRP: a stage that new IRP packets containing another IOCTL codes are placed in the program.</li>
+<li>swapIRP: a mutation stage of the IRPs sequence. Several IRP packets are placed in a single program. The order dependency can meet by the sequence of transferring IRPs.</li>
+<li>removeIRP: a stage that removes IRP in the program.</li>
+<li>havoc: a sort-of-fixed-length cycle with stacked random tweaks. The operations attempted during this stage include bit flips, overwrites with random integers, block deletion, block duplication, plus assorted dictionary-related operations.</li>
+</ul>
+<p>There’s the exec count progress indicator for the current stage, a global exec counter, and a benchmark for the current program execution speed. It's based on the execution criteria of the fuzzer that it sends an IRP to target driver once.</p>
+<h3>Findings in depth</h3>
+<pre><code>+--------------------------------------+
+| favored paths : 0 (0.00%)            |
+|  new edges on : 10                   |
+| total crashes : 0 (0 unique)         |
+|  total tmouts : 1 (1 unique)         |
++--------------------------------------+
+</code></pre><p>This gives you several metrics that are of interest mostly to complete nerds. The section includes the number of paths that the fuzzer likes the most based on a minimization algorithm baked into the code (these will get considerably more air time), and the last test cases that actually resulted in better edge coverage. There are also additional, more detailed counters for crashes and hangs.</p>
+<p>The last two sections tell the total  / unique counters of crashes and hangs. In irpt, crasher algorithm checks if newer crash / hang is produced in same context with crash / hang made before. In last line, Tmout counter indicates exactly the same thing to hang in irpt.</p>
+<h3>Fuzzing strategy yields</h3>
+<pre><code>+-----------------------------------------------------+
+|   insertIRP : 0/5327                                |
+|     swapIRP : 5/4003                                |
+|   mutateArg : 8/7749                                |
+| AFLdetermin : 9/23.0k                               |
+|      splice : 10/11.8k                              |
+|   removeIRP : 0/21.0k                               |
++-----------------------------------------------------+
+</code></pre><p>This is just another nerd-targeted section keeping track of how many paths we have netted, in proportion to the number of execs attempted, for each of the fuzzing strategies discussed earlier on. This serves to convincingly validate assumptions about the usefulness of the various approaches taken by irpt.</p>
+<h3>Path geometry</h3>
+<pre><code>+---------------------+
+|    level  : 3       |
+|   pending : 7       |
+|  pend fav : 2       |
+| uniq prog : 7       |
+|    reload : 0       |
++---------------------+
+</code></pre><p>The first field in this section tracks the path depth reached through the guided fuzzing process. In essence: the initial test cases supplied by the user are considered “level 1”. The test cases that can be derived from that through traditional fuzzing are considered “level 2”; the ones derived by using these as inputs to subsequent fuzzing rounds are “level 3”; and so forth. The maximum depth is therefore a rough proxy for how much value you’re getting out of the instrumentation-guided approach taken by irpt.</p>
+<p>The next field shows you the number of inputs that have not gone through any fuzzing yet. The same stat is also given for “favored” entries that the fuzzer really wants to get to in this database cycle (the non-favored entries may have to wait probabilistically to get their chance).</p>
+<p>Last, we have the number of unique programs found during this fuzzing section and number of VMs reloaded by crash / hangs. In irpt, if fault events is occurred, VM(Qemu instance) is to be  shut downed then restarted.</p>
+
+    <div class="pager">
+  
+  <div class="pager_item prev">
+    
+    <a href="/docs/kronol/internal/" class="pager_link button" title="Internal">
+      <span class="pager_label">Internal</span>
+    </a>
+  </div>
+  
+
+  
+  <div class="pager_item next">
+    
+    <a href="/search/" class="pager_link button" title="Search">
+      <span class="pager_label">Search</span>
+    </a>
+  </div>
+  
+</div>
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004" id="next">
+    <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" id="search">
+    <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 179" id="harmburger">
+    <path d="M1 10C1 4.477 5.477 0 11 0h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11C5.477 20 1 15.523 1 10zm0 80c0-5.523 4.477-10 10-10h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11c-5.523 0-10-4.477-10-10zm9 69c-5.523 0-10 4.477-10 10s4.477 10 10 10h220c5.523 0 10-4.477 10-10s-4.477-10-10-10H10z"></path>
+  </symbol>
+</svg>
+  </main>
+</div>
+
+  </div>
+<footer class="pt-2 pb-2">
+  <div class="wrap">
+    <p>&copy; <span class="year">2020</span> <a href ="https://github.com/cgy12306/" target="_blank" rel="noopener">cgy</a></p>
+  </div>
+</footer>
+
+
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004" id="next">
+    <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" id="search">
+    <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 179" id="harmburger">
+    <path d="M1 10C1 4.477 5.477 0 11 0h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11C5.477 20 1 15.523 1 10zm0 80c0-5.523 4.477-10 10-10h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11c-5.523 0-10-4.477-10-10zm9 69c-5.523 0-10 4.477-10 10s4.477 10 10 10h220c5.523 0 10-4.477 10-10s-4.477-10-10-10H10z"></path>
+  </symbol>
+</svg>
+<script src="/js/bundle.min.ea33d6084267e36adedec6a70c55b430fc18525a6b6659e329031b42e2daa14428738891a21ddc82a3b8784c8f5ed3553f91752d628427c75f65532c003764a0.js"></script>
+<script src="/js/search.min.f62afce8ca8eb9ab13cfc723106c13ffdf4f8b14c5e2c2291ecd1bf081c16e147d6db0a1fef239c6cbb54b4f055386317c491982319eba55e5baa1def80a2e5c.js" async defer></script>
+
+</body>
+</html>

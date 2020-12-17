@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Hugo 0.79.0" />
+<link rel="apple-touch-icon" sizes="180x180" href='/favicons/apple-touch-icon.png'>
+<link rel="icon" type="image/png" sizes="32x32" href='/favicons/favicon-32x32.png'>
+<link rel="icon" type="image/png" sizes="16x16" href='/favicons/favicon-16x16.png'>
+<link rel="manifest" href='/favicons/site.webmanifest'>
+<link rel="mask-icon" href='/favicons/safari-pinned-tab.svg'  color="#004750">
+<link rel="shortcut icon" href='/favicons/favicon.ico'>
+<meta name="msapplication-config" content='/favicons/browserconfig.xml'>
+<title>Overview | Compose Docs</title><meta property="og:title" content="Overview" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/" />
+
+<meta itemprop="name" content="Overview">
+<meta itemprop="description" content="">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Overview"/>
+<meta name="twitter:description" content=""/>
+
+
+<link rel="stylesheet" href="/css/styles.5326b797ec520d92b88e2c322865e051787a50e2e4b9b4588e7d9f0c931084c9cb625f0d526803590c36be4103467de71a591fa010158d56e18f7b236fb3f2cf.css" integrity="sha512-Uya3l&#43;xSDZK4jiwyKGXgUXh6UOLkubRYjn2fDJMQhMnLYl8NUmgDWQw2vkEDRn3nGlkfoBAVjVbhj3sjb7Pyzw==">
+
+</head>
+<body class="page-section">
+  <header class="nav_header">
+<nav class="wrap nav menu">
+	<a href="/" class="nav_brand">
+		<picture data-lit="/images/kronol.png" data-dark="/images/kronoldark.png">
+			
+			<source srcset = '/images/kronoldark.png' media="(prefers-color-scheme: dark)">
+			
+			<img srcset = '/images/kronol.png' alt = 'Compose Docs Logo'>
+		</picture>
+		<label class="nav_toggle toggle" title='Site Menu' role="button">
+			<svg class="icon">
+  <use xlink:href="#harmburger"></use>
+</svg>
+		</label>
+	</a>
+	<ul class="nav_body">
+		<li class="nav-item">
+<div class="search">
+  <label for="find" class="search_label"><svg class="icon">
+  <use xlink:href="#search"></use>
+</svg>
+  </label>
+  <input type="search" class="search_field" placeholder='Search the docs ...' id="find" autocomplete="off">
+  <div class="search_results results"></div>
+</div>
+
+
+
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/docs/"><span>Docs</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="https://docs.neuralvibes.com"><span>Example</span></a>
+		</li>
+		
+		<li class="nav-item">
+			<a class="nav-link" href="https://github.com/onweru/compose/" target="_blank">GitHub</a>
+		</li>
+		<li class="nav-item"><div class = 'color_mode'>
+  <label for = 'mode'></label>
+  <input type = 'checkbox' class = 'color_choice' id = 'mode' title="Toggle Dark Mode">
+</div>
+</li>
+	</ul>
+</nav>
+
+  </header>
+  <div class="main wrap pt-4"><div class="grid-auto"><aside class="aside menu">
+  <div>
+    <label class="aside_toggle toggle" title='Docs Menu' role="button">Docs Menu <svg class="icon">
+  <use xlink:href="#harmburger"></use>
+</svg></label>
+  </div>
+  <section class="section aside_inner">
+    <h2 class="section_title active"><a  href="/docs/" class="group">Overview</a></h2>
+      <section class="" id="docs-overview">
+  <section class="section aside_inner">
+    <h2 class="section_title"><a  href="/docs/kronol/" class="group">KRONOL Docs</a></h2>
+      <section class="" id="docs-kronol-docs">
+        <h3 class="section_link"><a id="docs-achivements" href="/docs/kronol/achivement/">Achivements</a></h3><nav id="TableOfContents"></nav>
+        <h3 class="section_link"><a id="docs-internal" href="/docs/kronol/internal/">Internal</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#irec">IREC</a></li>
+    <li><a href="#irpt">IRPT</a></li>
+    <li><a href="#ircap">IRCAP</a></li>
+  </ul>
+</nav>
+        <h3 class="section_link"><a id="docs-user-guide" href="/docs/kronol/user_guide/">User guide</a></h3><nav id="TableOfContents">
+  <ul>
+    <li><a href="#irec">IREC</a></li>
+    <li><a href="#irpt">IRPT</a></li>
+    <li><a href="#ircap">IRCAP</a></li>
+    <li><a href="#monitor">Monitor</a>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </section>
+  </section>
+      </section>
+  </section>
+</aside>
+
+  <main class="content">
+    <h1>Overview</h1><h2 id="pre-view">Pre-View</h2>
+<hr>
+<p>Driver is software components that intermediate communication between a device and an Operating System. Since kernel level privileges are required to use the device, the driver has the kernel level privilege level as well. If there are security flaws in the driver, unlike user land applications, it can lead to serious problems in which Windows kernel privileges are violated.</p>
+<p>There have been many efforts to improve the security of Windows drivers, but there have been many difficulties in applying effective testing techniques such as fuzzing (Fuzzing is a technique that automatically generates inputs and injects them into a program to check for bugs and software defects. It is used in various fields to test stability and security by detecting defects that are difficult for humans to predict.) compared to user land applications.</p>
+<p>Since the driver is loaded into kernel memory, we must access the kernel space to test driver stability. It is very difficult to apply fuzzing to this kernel component. Especially, it is even more difficult to apply coverage-guided fuzzing to the kernel.</p>
+<p>At the kernel level, the driver handles application requests in the form of a structure called <strong><code>IRP(I/O Request Packet)</code></strong>. More specifically, the <code>DispatchDeviceControl</code> that exists inside the driver handles each routine corresponding to the IOCTL CODE, which is the handler code contained in the IRP sent from the outside of the driver. At this time, access to the routine is determined by various constraints such as <code>inputBuffer</code> contents and <code>inputBufferLength</code> for each routine.</p>
+<p>In addition, there are cases in which the execution of other routines must precede the execution of a specific routine in the driver. The typical case mentioned above is a case where a global variable set in one routine is used in another routine. We express this situation as an ordering dependency between IOCTL routines. In order to apply fuzzing to Driver without problem, information about the driver interface is required: that satisfies the constraints and dependencies of IOCTL CODE.</p>
+<p>Even in order to apply coverage-guided fuzzing to the kernel level, coverage measurement at the kernel level and consideration of the driver interface must be preceded. These causes have made it difficult to fuzz the kernel and driver. So, team driverThru tried to solve these two problems. As we continued our research, we found several ways to solve them, and developed a simple and fast driver fuzzing framework applying these solutions. We hope this tool is useful for improving the stability of Windows drivers and kernel environments.</p>
+<h1 id="heading"></h1>
+<h1 id="heading-1"></h1>
+<h1 id="heading-2"></h1>
+<h1 id="heading-3"></h1>
+<h1 id="heading-4"></h1>
+<h2 id="irec">IREC</h2>
+<hr>
+<p>Even in order to apply coverage-guided fuzzing to the kernel level, coverage measurement at the kernel level and consideration of the driver interface must be preceded. These causes have made it difficult to fuzz the kernel and driver. So, team driverThru tried to solve these two problems. As we continued our research, we found several ways to solve them, and developed a simple and fast driver fuzzing framework applying these solutions. We hope this tool is useful for improving the stability of Windows drivers and kernel environments.</p>
+<p>In addition, the driver has different constraints for access to each of the IOCTL routines. Therefore, in order to apply the driver to the fuzzer, we have to find the contraints manually. Furthermore, since most of the drivers are distributed in the form of closed sources (.sys), Furthermore, since most of the drivers are distributed in the form of closed source (.sys), Reverse Engineering is required to obtain driver interface information. It is very inefficient to do this manually every time before you start fuzzing. It is very inefficient to do this manually every time before you start fuzzing. Even if this is possible, there is no guarantee that mistakes and false positives will not exist. Humans are not machines.</p>
+<p>The team driverThru wanted to develop a tool that can easily recovery the structure of numerous drivers to increase the efficiency of kernel fuzzing.</p>
+<p>That is how IREC (Interface RECovery) was born. IREC tool automatically extracts Driver interface information and constraints such as IOCTL CODE, InputBufferLength, OutBufferLength of driver in the form of .json file using angr framework, Symbolic Execution and radare2.</p>
+<p>The generated <code>.json</code> file is used as the kAFL agent code in the execution routine of IRPT (I/O Request &amp; Intel-PT based Fuzzer?) later. Using IREC, we can extract the interface information and constraints of the wdm driver very easily and quickly without any further inefficient manual work.</p>
+<h1 id="heading-5"></h1>
+<h1 id="heading-6"></h1>
+<h1 id="heading-7"></h1>
+<h1 id="heading-8"></h1>
+<h1 id="heading-9"></h1>
+<h2 id="fuzzer">Fuzzer</h2>
+<hr>
+<p><em>kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels</em> noted that non-determinism due to kernel-space interrupts, kernel threads, statefulness, and similar mechanisms makes kernel fuzzing more difficult. The kernel region has a memory structure different from that of the user land, and the execution flow can be changed by various unexpected requests such as interrupts. So it is not easy to perform a fuzzing test focusing only on a specific target region.</p>
+<p>In addition, instrumentation is required to receive feedback on coverage increase or decrease by executing the fuzzing routine. In the case of open source user land applications, it is possible to easily measure coverage by using a code compilation technique such as AFL instrumentation, but since the Windows kernel is closed source, it is impossible to use the instrumentation technique to modify the inside of the code.</p>
+<p>Accordingly, KRONOL borrowed the idea of using <code>Intel-PT</code> technology in the fuzzer from KAFL to measure the increase or decrease of coverage in the kernel. In addition, we modified the KVM-PT, QEMU-PT and hypercall communication technology developed by kAFL to implement communication between the VM loaded with the target driver and the fuzzer performing the mutation.</p>
+<h5 id="diyimageskaflfigpng"><img src="/images/kaflfig.png" alt="diy"></h5>
+<p>kAFL is a very nice tool in that it enables hardware-assisted kernel fuzzing that is not dependent on the OS, but it is far from the ideal fuzzer that the driverThru team pursues. The reason is that kAFL targets only a single IOCTL CODE. This means that the ordering dependency that exists between IOCTL routines cannot be considered.</p>
+<p>Therefore, the driverThru team tried to develop a fuzzer that solves the problems that kAFL cannot solve. Based on driver interface information that can be easily obtained using IREC.</p>
+<h3 id="brute-force-onecode-fuzzer">Brute-Force OneCode Fuzzer</h3>
+<p>So the first fuzzer developed by the DriverThru team is the <strong>Brute-Force OneCode Fuzzer</strong>. Brute-Force OneCode Fuzzer sends one IOCTL CODE per fuzzing routine to target driver considering only constraints such as inputBuffer and inputBufferLength obtained from IREC.</p>
+<p>However, since only one IOCTL CODE is sended in one fuzzing routine, it is difficult to expect the  dependency between driver routines to be satisfied only with the payload. Furthermore, kAFL reflects only the feedback result from the most recent fuzzing routine, even though the existing routines have contributed largely to coverage extension. Although the previous fuzzing routine satisfies the ordering dependency and thus the coverage of the last executed fuzzing routine could be increased, all contributions to the previous routine are ignored when coverage feedback is reflected.</p>
+<p>As such, Brute-Force OneCode Fuzzer completely relies on luck to satisfy the ordering dependency between IOCTL routines during fuzzing. Even if the fuzzer finds a crash fortunately, there is a fatal drawback that all payloads sent to target driver during fuzzing must be delivered to the driver in order to reproduce.</p>
+<h3 id="brute-force-multicode-fuzzer">Brute-Force MultiCode Fuzzer</h3>
+<p>The second fuzzer of team driverThru developed to solve the fatal problem of Brute-Force OneCode Fuzzer is Brute-Force MultiCode Fuzzer. <strong>Brute-Force MultiCode Fuzzer</strong> decodes the payload generated by the mutation, devides it into several IOCTL codes, and sends them to target driver. As a result, it is possible to satisfy the ordering dependency between IOCTL routines by delivering only one payload to the driver.</p>
+<h5 id="diyimagesdecodelogicpng"><img src="/images/decodelogic.png" alt="diy"></h5>
+<p>그러나 Brute-Force MultiCode Fuzzer에도 단점이 존재했다. Brute-Force MultiCode Fuzzer는 드라이버에 보내기 직전의 페이로드를 IOCTL CODE와 inputBeffer로 디코드하는 방식을 이용했다. 퍼저가 뮤테이션 단계에서 페이로드의 구조를 모르는 것이 Brute-Force MultiCode Fuzzer의 치명적인 단점이다. 이를 바꾸어 이야기 하면, IOCTL CODE와 inputBuffer를 퍼저가 능동적으로 구분하여 뮤테이션을 진행하지 못한다는 것이다. Brute-Force라는 단어가 퍼저의 이름에 들어간 이유는 바로 이러한 이유 때문이다. 퍼저는 페이로드를 생성할때, Driver interface를 전혀 고려하지 않고 뮤테이션을 진행한다는 점에서 분명한 운적 요소(Lucky!, 우효!)가 존재하기 때문이다. driverThru팀은 효율적인 드라이버 퍼징 프레임워크 구축을 위해 Brute-Force MultiCode Fuzzer도  Driver의 안정성 테스트를 위한 이상적인 퍼저에 적합하지 않다고 판단했다.</p>
+<h3 id="irpt">IRPT</h3>
+<p>퍼저가 무작위로 만든 하나의 페이로드를 여러개의 IOCTL CODE로 보내는 것을 넘어, 각 IOCTL CODE, inputBuffer, IOCTL CODE의 전송 순서 등의 dependency를 퍼저가 능동적으로 판단하여 각각 뮤테이션을 진행하는 기술을 구현할 수 있으면 좋겠다고 생각했고, 이를 위해 새롭게 개발한 퍼저가 바로 IRPT이다.</p>
+<h5 id="diyimagesirptfigpng"><img src="/images/irptfig.png" alt="diy"></h5>
+<p>IRPT는 IRP Program 이라는 단위로 IRP 패킷들을 묶어 뮤테이션을 진행하고, 이 IRP Program을 하나의 페이로드로 드라이버에게 전송하는 퍼저이다. Program 내부에 있는 각 IRP에 대한 IOCTL CODE와 inputBuffer 값들을 뮤테이션 하는 것은 물론, IRP의 순서에 대한 뮤테이션도 진행한다. 앞서 언급했던 두개의 Brute-force Fuzzer와 차별화 되는 IRPT만의 특징이자 가장 큰 장점은 바로 IRP의 순서에 대한 뮤테이션이 가능하다는 점이다. 선행되는 IOCTL 루틴으로 dependency가 충족되어 이후 IOCTL 루틴의 커버리지가 증가 한 경우, 커버리지의 증가를 야기한 루틴의 선후 관계를 퍼저가 이해하고 다음 뮤테이션에 이를 반영할 수 있다. 이로써 기존의 퍼저들에서 해결하지 못한 문제들을 성공적으로 해결하고, 효율적인 드라이버 퍼징을 실현할 수 있었다.</p>
+<a href="./kronol/" class="button ">KRONOL Docs</a>
+
+
+    <div class="pager pager_lean">
+  
+
+  
+</div>
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004" id="next">
+    <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" id="search">
+    <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 179" id="harmburger">
+    <path d="M1 10C1 4.477 5.477 0 11 0h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11C5.477 20 1 15.523 1 10zm0 80c0-5.523 4.477-10 10-10h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11c-5.523 0-10-4.477-10-10zm9 69c-5.523 0-10 4.477-10 10s4.477 10 10 10h220c5.523 0 10-4.477 10-10s-4.477-10-10-10H10z"></path>
+  </symbol>
+</svg>
+  </main>
+</div>
+
+  </div>
+<footer class="pt-2 pb-2">
+  <div class="wrap">
+    <p>&copy; <span class="year">2020</span> <a href ="https://github.com/cgy12306/" target="_blank" rel="noopener">cgy</a></p>
+  </div>
+</footer>
+
+
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 492.004 492.004" id="next">
+    <path d="M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" id="search">
+    <path d="M508.874 478.708L360.142 329.976c28.21-34.827 45.191-79.103 45.191-127.309C405.333 90.917 314.416 0 202.666 0S0 90.917 0 202.667s90.917 202.667 202.667 202.667c48.206 0 92.482-16.982 127.309-45.191l148.732 148.732c4.167 4.165 10.919 4.165 15.086 0l15.081-15.082c4.165-4.166 4.165-10.92-.001-15.085zM202.667 362.667c-88.229 0-160-71.771-160-160s71.771-160 160-160 160 71.771 160 160-71.771 160-160 160z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241 179" id="harmburger">
+    <path d="M1 10C1 4.477 5.477 0 11 0h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11C5.477 20 1 15.523 1 10zm0 80c0-5.523 4.477-10 10-10h220c5.523 0 10 4.477 10 10s-4.477 10-10 10H11c-5.523 0-10-4.477-10-10zm9 69c-5.523 0-10 4.477-10 10s4.477 10 10 10h220c5.523 0 10-4.477 10-10s-4.477-10-10-10H10z"></path>
+  </symbol>
+</svg>
+<script src="/js/bundle.min.ea33d6084267e36adedec6a70c55b430fc18525a6b6659e329031b42e2daa14428738891a21ddc82a3b8784c8f5ed3553f91752d628427c75f65532c003764a0.js"></script>
+<script src="/js/search.min.f62afce8ca8eb9ab13cfc723106c13ffdf4f8b14c5e2c2291ecd1bf081c16e147d6db0a1fef239c6cbb54b4f055386317c491982319eba55e5baa1def80a2e5c.js" async defer></script>
+
+</body>
+</html>
