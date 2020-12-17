@@ -226,7 +226,7 @@ The last two sections tell the total  / unique counters of crashes and hangs. In
 
 <h3>Fuzzing strategy yields</h3>
 
-```bash
+```
 +-----------------------------------------------------+
 |   insertIRP : 0/5327                                |
 |     swapIRP : 5/4003                                |
